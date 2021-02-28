@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Servicios</h1>
+
+<a href="{% url 'servicio-create' %}">Crear nuevo servicio</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>Cliente</th>
+            <th>Motor</th>
+            <th>Mantenimiento</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for object in object_list %}
+            <tr>
+                <td>{{ object.cliente }}</td>
+                <td>{{ object.motor }}</td>
+                <td>{{ object.mantenimiento }}</td>
+                <td> <a href="({% url 'servicio-update' %})">Modificar</a> </td>
+                <td> <a href="({% url 'servicio-delete' %})">Eliminar</a> </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

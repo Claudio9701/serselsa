@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Servicio {{ object.pk }}</h1>
+
+<p><strong>Cliente: </strong>{{ object.cliente }}</p>
+<p><strong>Motor: </strong>{{ object.motor }}</p>
+<p><strong>Mantenimiento: </strong>{{ object.mantenimiento }}</p>
+
+{% endblock %}
